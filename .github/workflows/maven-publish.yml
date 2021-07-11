@@ -4,8 +4,6 @@
 name: Maven Package
 
 on:
-  release:
-    types: [created]
   repository_dispatch:
     types: [build]
   workflow_dispatch:
@@ -37,7 +35,7 @@ jobs:
 
     - name: Move artifact
       run: |
-        mv home/runner/work/MCResourceAnalyzer/MCResourceAnalyzer/target/mc-resource-analyzer-1.1.0.jar .
+        mv MCResourceAnalyzer/target/mc-resource-analyzer-1.1.0.jar .
       
     - name: Upload macos artifact
       uses: actions/upload-artifact@v2
