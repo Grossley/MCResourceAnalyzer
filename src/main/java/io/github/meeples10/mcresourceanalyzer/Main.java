@@ -108,7 +108,7 @@ public class Main {
                     + "\n";
         }
         data += "id,";
-        for(int i = 0; i < 256; i++) {
+        for(int i = -512; i < 512; i++) {
             data += i + ",";
         }
         data += "total,percent_of_total,percent_excluding_air\n";
@@ -119,7 +119,7 @@ public class Main {
             keyIndex += 1;
             System.out.print("\rGenerating CSV... " + String.format(completionFormat, keyIndex, blockCounter.size()));
             data += key + ",";
-            for(int i = 0; i < 256; i++) {
+            for(int i = -512; i < 512; i++) {
                 if(!heightCounter.get(key).containsKey(i)) {
                     data += "0,";
                 } else {
@@ -293,7 +293,7 @@ public class Main {
     private static String generateTable(double totalBlocks, double totalExcludingAir) {
         String data = "<table>\n";
         data += "<tr><th>id</th><th>";
-        for(int i = 0; i < 256; i++) {
+        for(int i = -512; i < 512; i++) {
             data += i + "</th><th>";
         }
         data += "total</th><th>percent_of_total</th><th>percent_excluding_air</th></tr>\n<tr>";
@@ -304,7 +304,7 @@ public class Main {
             keyIndex += 1;
             System.out.print("\rGenerating table... " + String.format(completionFormat, keyIndex, blockCounter.size()));
             data += "<td>" + key + "</td>";
-            for(int i = 0; i < 256; i++) {
+            for(int i = -512; i < 512; i++) {
                 if(!heightCounter.get(key).containsKey(i)) {
                     data += "<td>0</td>";
                 } else {
