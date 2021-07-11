@@ -11,7 +11,15 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
+    <distributionManagement>
+        <repository>
+          <uniqueVersion>false</uniqueVersion>
+          <id>corp1</id>
+          <name>MCResourceAnalyzer</name>
+          <url>https://github.com/Grossley/MCResourceAnalyzer</url>
+          <layout>default</layout>
+        </repository>
+    </distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
