@@ -35,7 +35,7 @@ jobs:
 
     - name: Move artifact
       run: |
-        mv MCResourceAnalyzer/target/mc-resource-analyzer-1.1.0.jar .
+        mv target/mc-resource-analyzer-1.1.0.jar .
       
     - name: Upload macos artifact
       uses: actions/upload-artifact@v2
