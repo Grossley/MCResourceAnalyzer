@@ -1,6 +1,6 @@
 name: Compile MCResourceAnalyzer debug
 
-on:
+on: [push, pull_request]
   repository_dispatch:
     types: [build]
   workflow_dispatch:
@@ -9,6 +9,9 @@ on:
           description: 'Run?'
           required: true
           default: 'YES!'
+  push:
+    branches:
+      - 1.17-Test
 jobs:
   build:
 
